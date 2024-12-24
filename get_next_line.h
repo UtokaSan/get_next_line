@@ -6,7 +6,7 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 01:59:43 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/12/22 23:44:26 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/12/24 12:01:59 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,5 @@ char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strchr(const char *str, int c);
 char	*ft_substr(const char *str, unsigned int start, size_t len);
 size_t	ft_strlen(const char *str);
+char	*insert_buffer(char *buffer, char *data);
 #endif

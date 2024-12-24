@@ -6,7 +6,7 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 01:59:25 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/12/23 20:16:08 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/12/24 12:01:55 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,20 @@ size_t	ft_strlen(const char *str)
 	while (str[i] != '\0')
 		i++;
 	return (i);
+}
+
+char	*insert_buffer(char	*buffer, char *data)
+{
+	char	*temp;
+
+	if (!buffer)
+		temp = ft_strdup(data);
+	else
+	{
+		temp = ft_strjoin(buffer, data);
+		free(buffer);
+	}
+	return (temp);
 }
 
 char	*ft_substr(const char *str, unsigned int start, size_t len)
@@ -68,19 +82,6 @@ char	*ft_strdup(const char *str)
 	}
 	dup[i] = '\0';
 	return (dup);
-}
-
-char	*ft_strchr(const char *str, int c)
-{
-	while (*str)
-	{
-		if (*str == c)
-			return ((char *)str);
-		str++;
-	}
-	if (c == '\0')
-		return ((char *)str);
-	return (NULL);
 }
 
 char	*ft_strjoin(const char *s1, const char *s2)

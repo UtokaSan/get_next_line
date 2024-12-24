@@ -1,3 +1,0 @@
-Bonjour
-Ceci est un test.
-Chaque caractère sera lu un par un.
